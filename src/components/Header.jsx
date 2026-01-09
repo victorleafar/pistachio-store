@@ -5,7 +5,7 @@ export default function Header() {
   
   return (
     <header className="header">
-      <h1>Pistachio Store</h1>
+      <h1>Pistacho Store</h1>
       <nav>
         <a href="/">Home</a>
         <a 

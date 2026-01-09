@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Pistachio Store</h3>
+          <h3>Pistacho Store</h3>
           <p>Windbreakers minimalistas y elegantes para tu estilo único.</p>
         </div>
 
@@ -25,7 +25,7 @@ export default function Footer() {
 
         <div className="footer-section">
           <h4>Síguenos</h4>
-          <a href="https://www.instagram.com/juanpistacchio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/gopistacho/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.facebook.com/JohnBraandon" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://www.tiktok.com/@juan.pistacchio" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 Pistachio Store. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Pistacho Store. Todos los derechos reservados.</p>
         <p className="developer-credit">
           Desarrollado por{" "}
           <a 
