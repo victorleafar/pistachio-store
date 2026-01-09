@@ -1,0 +1,232 @@
+﻿/* Hero Section - Fashion Editorial */
+.hero {
+  height: 70vh;
+  min-height: 500px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 242, 237, 0.3);
+  z-index: 0;
+}
+
+.hero-content {
+  text-align: center;
+  color: var(--text-primary);
+  padding: 3rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(245, 242, 237, 0.5);
+}
+
+.hero-content button {
+  margin-top: 1rem;
+  padding: 1rem 3.5rem;
+  background: var(--bg-dark);
+  color: #FFFFFF;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content button:hover {
+  background: #3A2F2A;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero-content button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gender Section - Minimalist */
+.gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-medium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-slow);
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: var(--transition-slow);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.circle span {
+  transition: var(--transition-smooth);
+  position: relative;
+  z-index: 1;
+  background: rgba(245, 242, 237, 0.9);
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.circle:hover {
+  border-color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.circle:hover img {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.circle:hover span {
+  color: var(--text-primary);
+  background: rgba(245, 242, 237, 0.95);
+}
+
+.circle:nth-child(1) {
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.circle:nth-child(2) {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Products Grid - Clean Layout */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  padding: 4rem 6%;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .hero-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .hero-content button {
+    padding: 0.875rem 2.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .gender {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 3rem auto;
+  }
+  
+  .circle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .circle span {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .products {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 5%;
+  }
+}

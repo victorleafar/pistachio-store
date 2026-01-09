@@ -1,0 +1,80 @@
+﻿/* Product Card - Minimalist Fashion */
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  background: transparent;
+  height: 100%;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-smooth);
+  background: var(--bg-card);
+  border-radius: 12px;
+}
+
+.card:hover img {
+  opacity: 0.92;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.4;
+  transition: var(--transition-smooth);
+}
+
+.card:hover h3 {
+  color: var(--text-secondary);
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: var(--transition-smooth);
+}
+
+.card:hover p {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .card img {
+    height: 350px;
+  }
+  
+  .card h3 {
+    font-size: 0.875rem;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+  }
+}
