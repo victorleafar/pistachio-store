@@ -27,7 +27,7 @@ export default function Footer() {
           <h4>Síguenos</h4>
           <a href="https://www.instagram.com/gopistacho/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.facebook.com/JohnBraandon" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.tiktok.com/@juan.pistacchio" target="_blank" rel="noopener noreferrer">TikTok</a>
+          {/* <a href="https://www.tiktok.com/@juan.pistacchio" target="_blank" rel="noopener noreferrer">TikTok</a> */}
         </div>
 
         <div className="footer-section">

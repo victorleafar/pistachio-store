@@ -1,4 +1,5 @@
-﻿import { products } from "../data/products";
+﻿import { useState } from "react";
+import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
 import bannerVideo from "../assets/banner.mp4";
 import femaleImg from "../assets/mujeres.jpg";
@@ -6,12 +7,25 @@ import maleImg from "../assets/hombres.jpg";
 import "./Home.css";
 
 export default function Home() {
+  const [selectedGender, setSelectedGender] = useState("todos");
+
   const scrollToProducts = () => {
     const productsSection = document.querySelector('.products');
     if (productsSection) {
       productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const handleGenderFilter = (gender) => {
+    setSelectedGender(gender);
+    scrollToProducts();
+  };
+
+  const filteredProducts = selectedGender === "todos" 
+    ? products 
+    : products.filter(product => 
+        product.gender === selectedGender || product.gender === "unisex"
+      );
 
   return (
     <>
@@ -29,13 +43,13 @@ export default function Home() {
       </section>
 
       <section className="gender">
-        <div className="gender-card">
+        <div className="gender-card" onClick={() => handleGenderFilter("hombres")}>
           <img src={maleImg} alt="Hombres" />
           <div className="gender-overlay">
             <h3>Hombres</h3>
           </div>
         </div>
-        <div className="gender-card">
+        <div className="gender-card" onClick={() => handleGenderFilter("mujeres")}>
           <img src={femaleImg} alt="Mujeres" />
           <div className="gender-overlay">
             <h3>Mujeres</h3>
@@ -44,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="products">
-        {products.map(product => (
+        {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </section>

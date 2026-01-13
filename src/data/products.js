@@ -21,6 +21,8 @@ import img20 from '../assets/4.1.PNG';
 import img21 from '../assets/4.2.PNG';
 import img22 from '../assets/4.3.JPG';
 import img23 from '../assets/4.4.PNG';
+import img24 from '../assets/5.4.JPG';
+import img25 from '../assets/5.5.JPG';
 
 export const products = [
   {
@@ -30,6 +32,7 @@ export const products = [
     description: "Cortaviento ligero con diseño minimalista.",
     detailedDescription: "Taslan 100% poliéster con corte oversized relajado, bloques de color en púrpura, verde neón, rosa y turquesa; cuenta con capucha, cierre completo, elásticos en puños y cintura y logo blanco, con un estilo de energía noventera para destacar, siendo una pieza única.",
     availableSizes: ["S", "M",],
+    gender: "mujeres", // "hombres", "mujeres", o "unisex"
     mainImage: img7,
     images: [img7, img8, img9, img1],
   },
@@ -40,6 +43,7 @@ export const products = [
     description: "Protección y estilo para cualquier clima.",
     detailedDescription: "100% poliéster. Fit regular cómodo. Color coral con capucha, cierre completo y elásticos. Logo blanco. Ligera y resistente para días activos y noches frescas.",
     availableSizes: ["S"],
+    gender: "mujeres",
     mainImage: img10,
     images: [img10, img11, img12, img2],
   },
@@ -50,6 +54,7 @@ export const products = [
     description: "Un cortaviento que combina con la naturaleza.",
     detailedDescription: "100% poliéster. Fit con estructura ligera. Composición en beige, blanco y azul rey con capucha, cierre completo y elásticos. Logo blanco. Diseño limpio y técnico con textura que mantiene su forma. Ideal para recorridos urbanos con estilo y funcionalidad.",
     availableSizes: ["M"],
+    gender: "hombres",
     mainImage: img13,
     images: [img13, img3],
   },
@@ -60,6 +65,7 @@ export const products = [
     description: "Refrescante como el océano.",
     detailedDescription: "100% poliéster. Fit Regular con caída estructurada. Color: Beige superior, franja roja central, azul profundo en la base, con capucha, cierre completo y elásticos. Logo blanco. Contraste retro con estructura técnica. Ideal para recorridos urbanos con estilo firme y presencia visual.",
     availableSizes: ["S", "M", "L"],
+    gender: "hombres",
     mainImage: img4,
     images: [img20, img21, img22, img23, img4],
   },
@@ -70,8 +76,9 @@ export const products = [
     description: "Colores que evocan un atardecer.",
     detailedDescription: "100% poliéster. Fit caída ligera. Color Azul profundo con capucha, cierre completo y elásticos. Logo blanco. Estética limpia y potente. Ideal para días de calle, lluvia ligera o simplemente para marcar presencia con estilo.",
     availableSizes: ["M"],
+    gender: "hombres",
     mainImage: img15,
-    images: [img14, img5, img15, img16],
+    images: [img14, img5, img15, img16, img24, img25],
   },
   {
     id: "6",
@@ -80,6 +87,7 @@ export const products = [
     description: "Para las corridas más frescas.",
     detailedDescription: "Cortaviento deportivo con diseño de atardecer degradado. Perfecto para corredores y atletas que buscan protección sin sacrificar movilidad. Material técnico transpirable con tecnología de secado rápido.",
     availableSizes: ["S", "M", "L"],
+    gender: "hombres",
     mainImage: img6,
     images: [img19, img17, img18, img6],
   },
