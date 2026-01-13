@@ -1,12 +1,11 @@
 ﻿import "./Header.css";
-import logo from "../../public/pistacho.png";
 
 export default function Header() {
   const whatsappMessage = "Hola!%20Me%20gustaría%20conocer%20más%20sobre%20sus%20productos%20de%20Windbreakers.%20¿Podrían%20brindarme%20más%20información?%20Gracias!";
   
   return (
     <header className="header">
-      <img src={logo} alt="Pistacho Store" className="header-logo" />
+      <img src="/pistacho.png" alt="Pistacho Store" className="header-logo" />
       <nav>
         <a href="/">Home</a>
         <a 
