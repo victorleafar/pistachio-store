@@ -5,7 +5,7 @@ export default function Header() {
   
   return (
     <header className="header">
-      <img src="/pistacho.png" alt="Pistacho Store" className="header-logo" />
+      <img src="/logo.png" alt="Pistacho Store" className="header-logo" />
       <nav>
         <a href="/">Home</a>
         <a 

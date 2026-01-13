@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Pistacho Store</h3>
-          <p>Windbreakers minimalistas y elegantes para tu estilo único.</p>
+          <h3>Pistacho</h3>
+          <p>Diseños únicos que se adaptan a tu estilo. Encuentra tu próximo favorito.</p>
         </div>
 
         <div className="footer-section">
