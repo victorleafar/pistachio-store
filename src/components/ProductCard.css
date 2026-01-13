@@ -40,12 +40,13 @@
 .card h3 {
   font-size: 0.95rem;
   margin: 1.25rem 0 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-primary);
   line-height: 1.4;
   transition: var(--transition-smooth);
+  font-family: 'League Spartan', sans-serif;
 }
 
 .card:hover h3 {
@@ -59,6 +60,7 @@
   font-weight: 400;
   letter-spacing: 0.02em;
   transition: var(--transition-smooth);
+  font-family: 'Questrial', sans-serif;
 }
 
 .card:hover p {

@@ -39,7 +39,7 @@
 
 .hero-content {
   text-align: center;
-  color: var(--text-primary);
+  color: #FFFFFF;
   padding: 3rem 2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -50,12 +50,21 @@
 
 .hero-content h2 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2.5rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-shadow: 0 2px 8px rgba(245, 242, 237, 0.5);
+  letter-spacing: -0.02em;
+  text-transform: none;
+  line-height: 0.95;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #FFFFFF;
+}
+
+.hero-line-1,
+.hero-line-2 {
+  display: block;
 }
 
 .hero-content button {
@@ -86,83 +95,85 @@
   z-index: 1;
 }
 
-/* Gender Section - Minimalist */
+/* Gender Section - Large Cards with Overlay */
 .gender {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin: 5rem auto;
-  padding: 2rem;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1.5px solid var(--border-medium);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: var(--transition-slow);
-  background: transparent;
-  overflow: hidden;
+.gender-card {
   position: relative;
+  height: 500px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-smooth);
 }
 
-.circle img {
+.gender-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gender-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 50%;
-  transition: var(--transition-slow);
-  opacity: 0.7;
-  z-index: 0;
-}
-
-.circle span {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 3rem;
   transition: var(--transition-smooth);
-  position: relative;
-  z-index: 1;
-  background: rgba(245, 242, 237, 0.9);
-  padding: 0.5rem 1.25rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
 }
 
-.circle:hover {
-  border-color: var(--text-primary);
-  transform: scale(1.05);
+.gender-overlay h3 {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-smooth);
 }
 
-.circle:hover img {
-  opacity: 0.85;
-  transform: scale(1.1);
+.gender-card:hover img {
+  transform: scale(1.08);
 }
 
-.circle:hover span {
-  color: var(--text-primary);
-  background: rgba(245, 242, 237, 0.95);
+.gender-card:hover .gender-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 }
 
-.circle:nth-child(1) {
+.gender-card:hover .gender-overlay h3 {
+  transform: translateY(-8px);
+  letter-spacing: 0.12em;
+}
+
+.gender-card:nth-child(1) {
   animation: fadeInUp 1s ease-out 0.5s both;
 }
 
-.circle:nth-child(2) {
+.gender-card:nth-child(2) {
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
@@ -199,8 +210,10 @@
   }
   
   .hero-content h2 {
-    font-size: 2rem;
-    letter-spacing: 0.08em;
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+    gap: 0;
+    line-height: 0.95;
   }
   
   .hero-content button {
@@ -209,19 +222,20 @@
   }
   
   .gender {
-    flex-direction: row;
-    gap: 2rem;
-    margin: 3rem auto;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   
-  .circle {
-    width: 160px;
-    height: 160px;
+  .gender-card {
+    height: 400px;
   }
   
-  .circle span {
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
+  .gender-overlay {
+    padding: 2rem;
+  }
+  
+  .gender-overlay h3 {
+    font-size: 2rem;
   }
   
   .products {

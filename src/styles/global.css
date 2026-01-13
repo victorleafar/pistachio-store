@@ -1,6 +1,8 @@
-﻿:root {
+﻿@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Questrial&display=swap');
+
+:root {
   /* Fashion Premium Palette */
-  --bg-primary: #F5F2ED;
+  --bg-primary: #EEEBE6;
   --bg-secondary: #F3EFE9;
   --bg-card: #EFECE6;
   --bg-dark: #2B2522;
