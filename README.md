@@ -10,7 +10,7 @@ https://pistachio-store.vercel.app/
 
 Pistachio Store é um projeto de e-commerce criado para estudo e prática de React, organização de rotas e estrutura de uma loja online simples.
 
-O foco do projeto é navegação, estrutura de páginas e experiência básica do usuário.
+O foco do projeto é navegação, estrutura de páginas e experiência básica do usuário
 
 ## Tecnologias
 
