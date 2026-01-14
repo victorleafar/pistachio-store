@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+﻿import { useState, useEffect } from "react";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
 import bannerVideo from "../assets/banner.mp4";
@@ -8,6 +8,15 @@ import "./Home.css";
 
 export default function Home() {
   const [selectedGender, setSelectedGender] = useState("todos");
+
+  // Restaurar la posición del scroll al volver del detalle del producto
+  useEffect(() => {
+    const savedPosition = sessionStorage.getItem('scrollPosition');
+    if (savedPosition) {
+      window.scrollTo(0, parseInt(savedPosition));
+      sessionStorage.removeItem('scrollPosition');
+    }
+  }, []);
 
   const scrollToProducts = () => {
     const productsSection = document.querySelector('.products');
