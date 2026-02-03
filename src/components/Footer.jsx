@@ -63,7 +63,7 @@ export default function Footer() {
           </a>
           {" • "}
           <a 
-            href="https://www.instagram.com/vrmc.consultoria/" 
+            href="https://www.instagram.com/vrmc.consultoriati/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="developer-link"
