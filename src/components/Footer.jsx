@@ -68,7 +68,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="developer-link"
           >
-            @vrmc.consultoria
+            @vrmc.consultoriati
           </a>
         </p>
       </div>
